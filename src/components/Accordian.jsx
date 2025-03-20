@@ -11,6 +11,7 @@ const Accordian = () => {
 
     return (
         <div className="wrapper">
+            <button>Enable Multi Selection</button>
             <div className="accordian">
                 {
                     data && data.length > 0 ? 
