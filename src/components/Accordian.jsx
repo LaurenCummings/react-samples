@@ -15,7 +15,7 @@ const Accordian = () => {
                 {
                     data && data.length > 0 ? 
                         data.map(dataItem => 
-                            <div className="item">
+                            <div key={dataItem.id} className="item">
                                 <div onClick={()=>handleSingleSelection(dataItem.id)} className="title">
                                     <h3>{dataItem.question}</h3>
                                     <span>+</span>
