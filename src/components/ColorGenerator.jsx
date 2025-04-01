@@ -15,10 +15,10 @@ function ColorGenerator() {
             }
             setColor(hexColor);
         } else {
-            let num1 = Math.floor(Math.random() * 256);
-            let num2 = Math.floor(Math.random() * 256);
-            let num3 = Math.floor(Math.random() * 256);
-            const rgbColor = "rgb(" + num1 + ", " + num2 + ", " + num3 + ")";
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            const rgbColor = "rgb(" + r + ", " + g + ", " + b + ")";
             setColor(rgbColor);
         }
     }
@@ -37,7 +37,9 @@ function ColorGenerator() {
             <button onClick={createRandomColor}>
                 Generate Random Color
             </button>
-            <h1>Color: {color}</h1>
+            <div className="color-label">
+                <h1>Color: {color}</h1>   
+            </div>
         </div>
     )
 }
