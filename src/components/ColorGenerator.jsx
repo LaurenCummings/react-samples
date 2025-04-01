@@ -37,6 +37,7 @@ function ColorGenerator() {
             <button onClick={createRandomColor}>
                 Generate Random Color
             </button>
+            <h1>Color: {color}</h1>
         </div>
     )
 }
