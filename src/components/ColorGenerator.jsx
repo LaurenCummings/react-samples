@@ -15,7 +15,11 @@ function ColorGenerator() {
             }
             setColor(hexColor);
         } else {
-
+            let num1 = Math.floor(Math.random() * 256);
+            let num2 = Math.floor(Math.random() * 256);
+            let num3 = Math.floor(Math.random() * 256);
+            const rgbColor = "rgb(" + num1 + ", " + num2 + ", " + num3 + ")";
+            setColor(rgbColor);
         }
     }
 
