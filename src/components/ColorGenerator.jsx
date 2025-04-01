@@ -1,5 +1,5 @@
 import '../css/ColorGenerator.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function ColorGenerator() {
     const [typeOfColor, setTypeOfColor] = useState('hex');
@@ -23,6 +23,10 @@ function ColorGenerator() {
         }
     }
 
+    useEffect(() => {
+        createRandomColor()
+    }, [typeOfColor]);
+
     return (
         <div 
             className="cg-container" 
@@ -38,7 +42,8 @@ function ColorGenerator() {
                 Generate Random Color
             </button>
             <div className="color-label">
-                <h1>Color: {color}</h1>   
+                <h1>{typeOfColor} color</h1>
+                <h1>{color}</h1>   
             </div>
         </div>
     )
