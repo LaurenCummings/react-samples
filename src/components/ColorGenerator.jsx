@@ -42,7 +42,7 @@ function ColorGenerator() {
                 Generate Random Color
             </button>
             <div className="color-label">
-                <h1>{typeOfColor} color</h1>
+                <h3>{typeOfColor} color</h3>
                 <h1>{color}</h1>   
             </div>
         </div>
