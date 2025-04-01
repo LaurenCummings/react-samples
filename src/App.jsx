@@ -1,11 +1,12 @@
 import './css/App.css';
 import Accordian from './components/Accordian';
+import ColorGenerator from './components/ColorGenerator';
 
 function App() {
 
   return (
     <div>
-      <Accordian />
+      <ColorGenerator />
     </div>
   )
 }
