@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <StarRating />
+      <StarRating numOfStars={10} />
     </div>
   )
 }
