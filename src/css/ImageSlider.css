@@ -55,6 +55,10 @@
     cursor: pointer;
 }
 
+.indicator:hover {
+    opacity: 0.5;
+}
+
 .active-indicator {
     background-color: #ffffff;
 }
