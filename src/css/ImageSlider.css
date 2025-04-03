@@ -12,6 +12,15 @@
     box-shadow: 0px 0px 7px #666;
     width: 100%;
     height: 100%;
+    animation: slideIn 0.3s;
+}
+
+.slide-left {
+    animation: slideLeft 0.3s;
+}
+
+.slide-right {
+    animation: slideRight 0.3s;
 }
 
 .arrow {
@@ -21,6 +30,7 @@
     color: #fff;
     filter: drop-shadow(0px 0px 5px #555);
     cursor: pointer;
+    z-index: 100;
 }
 
 .arrow:hover {
@@ -65,4 +75,22 @@
 
 .non-active-indicator {
     background-color: gray;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(20px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-20px);
+    }
+    to {
+        transform: translateX(0);
+    }
 }

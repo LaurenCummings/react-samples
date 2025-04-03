@@ -7,6 +7,8 @@ function ImageSlider({url, limit, page}) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [errorMsg, setErrorMsg] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [slideLeft, setSlideLeft] = useState(false);
+    const [slideRight, setSlideRight] = useState(false);
 
     async function fetchImages(url) {
         try {
@@ -27,17 +29,19 @@ function ImageSlider({url, limit, page}) {
 
     function handlePrevious() {
         setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
+        setSlideLeft(true);
+        setSlideRight(false);
     }
 
     function handleNext() {
         setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
+        setSlideRight(true);
+        setSlideLeft(false);
     }
 
     useEffect(() => {
         if (url !== '') fetchImages(url)
     }, [url]);
-
-    console.log(images);
 
     if (loading) {
         return <div>Loading data ! Please wait</div>
@@ -59,7 +63,9 @@ function ImageSlider({url, limit, page}) {
                         key={imageItem.id}
                         alt={imageItem.download_url}
                         src={imageItem.download_url}
-                        className={currentSlide === index ? "current-image" : "hide-image"}
+                        className={`${currentSlide === index ? "current-image" : "hide-image"} 
+                            ${slideLeft ? "slide-left" : ""}
+                            ${slideRight ? "slide-right" : ""}`}
                     />
                 )) : null
             }
@@ -77,7 +83,10 @@ function ImageSlider({url, limit, page}) {
                                 currentSlide === index 
                                     ? "indicator active-indicator" 
                                     : "indicator non-active-indicator"}
-                            onClick={() => setCurrentSlide(index)}>
+                            onClick={() => {setCurrentSlide(index)
+                                            setSlideLeft(false)
+                                            setSlideRight(false)}
+                            }>
                         </button>
                     )
                     : null
