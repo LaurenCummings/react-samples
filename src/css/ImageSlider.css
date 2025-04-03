@@ -36,8 +36,7 @@
     bottom: 1rem;
 }
 
-.current-indicator {
-    background-color: #ffffff;
+.indicator {
     height: 15px;
     width: 15px;
     border-radius: 50%;
@@ -45,4 +44,16 @@
     outline: none;
     margin: 0, 0.2rem;
     cursor: pointer;
+}
+
+.hide-image {
+    display: none;
+}
+
+.active-indicator {
+    background-color: #ffffff;
+}
+
+.non-active-indicator {
+    background-color: gray;
 }
