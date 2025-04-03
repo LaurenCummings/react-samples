@@ -1,5 +1,6 @@
 import '../css/ImageSlider.css';
 import { useState, useEffect } from 'react';
+import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from 'react-icons/bs';
 
 function ImageSlider({url, limit, page}) {
     const [images, setImages] = useState([]);
@@ -40,7 +41,30 @@ function ImageSlider({url, limit, page}) {
 
     return (
         <div className="image-slider">
-
+            <BsArrowLeftCircleFill className="arrow arrow-left" />
+            {images && images.length 
+                ? images.map(imageItem => (
+                    <img
+                        key={imageItem.id}
+                        alt={imageItem.download_url}
+                        src={imageItem.download_url}
+                        className="current-image"
+                    />
+                )) : null
+            }
+            <BsArrowRightCircleFill className="arrow arrow-right" />
+            <span className="circle-indicators">
+                {
+                    images && images.length ? 
+                    images.map((_, index) => 
+                        <button
+                            key={index}
+                            className="current-indicator">
+                        </button>
+                    )
+                    : null
+                }
+            </span>
         </div>
     )
 }
