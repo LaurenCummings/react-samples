@@ -36,6 +36,10 @@
     bottom: 1rem;
 }
 
+.hide-image {
+    display: none;
+}
+
 .indicator {
     height: 15px;
     width: 15px;
@@ -44,10 +48,6 @@
     outline: none;
     margin: 0, 0.2rem;
     cursor: pointer;
-}
-
-.hide-image {
-    display: none;
 }
 
 .active-indicator {
