@@ -37,7 +37,20 @@ function LoadMoreData() {
 
     return(
         <div className="load-more-data">
-
+            <div className="product-container">
+                {products && products.length 
+                    ? products.map(item => (
+                        <div className="product" key={item.id}>
+                            <img src={img.thumbnail} alt={item.title} />
+                            <p>{item.title}</p>
+                        </div>
+                    ))
+                    : null
+                }
+            </div>
+            <div className="load-more-button">
+                <button>Load More Products</button>
+            </div>
         </div>
     )
 }
