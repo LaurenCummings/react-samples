@@ -8,32 +8,36 @@ function LoadMoreData() {
     const [disableButton, setDisableButton] = useState(false);
     const [totalProducts, setTotalProducts] = useState(0);
 
-    async function fetchProducts() {
-        try {
-            setLoading(true)
-            const response = await fetch(`https://dummyjson.com/products?limit=20&skip=${
-                count === 0 ? 0 : count * 20}`);
-
-            const result = await response.json();
-
-            if (result && result.products && result.products.length) {
-                setProducts((prevData) => [...prevData, ...result.products]);
-                setTotalProducts(result.total);
-                setLoading(false);
-            }
-        
-        } catch(e) {
-            console.log(e);
-            setLoading(false);
-        } 
-    }
-
     useEffect(() => {
+        let isCancelled = false;
+        async function fetchProducts() {
+            try {
+                setLoading(true)
+                const response = await fetch(`https://dummyjson.com/products?limit=20&skip=${
+                    count === 0 ? 0 : count * 20}`);
+    
+                const result = await response.json();
+    
+                if (result && result.products && result.products.length && !isCancelled) {
+                    setProducts((prevData) => [...prevData, ...result.products]);
+                    setTotalProducts(result.total);
+                    setLoading(false);
+                }
+            
+            } catch(e) {
+                console.log(e);
+                setLoading(false);
+            } 
+        }
         fetchProducts();
+
+        return () => {
+            isCancelled = true;
+        }
     }, [count])
 
     useEffect(() => {
-        if (products && products.length === totalProducts + 20) setDisableButton(true);
+        if (products && products.length === 194) setDisableButton(true);
     }, [products])
 
     if (loading) {
