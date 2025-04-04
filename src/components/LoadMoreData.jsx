@@ -15,11 +15,11 @@ function LoadMoreData() {
             const result = await response.json();
 
             if (result && result.products && result.products.length) {
-                setProducts(result.products);
+                setProducts((prevData) => [...prevData, ...result.products]);
                 setLoading(false);
             }
 
-            console.log(result);
+            console.log(result.total);
         
         } catch(e) {
             console.log(e);
@@ -29,7 +29,7 @@ function LoadMoreData() {
 
     useEffect(() => {
         fetchProducts();
-    },[])
+    },[count])
 
     if (loading) {
         return <div>Loading products...</div>
@@ -49,7 +49,7 @@ function LoadMoreData() {
                 }
             </div>
             <div className="load-more-button">
-                <button>Load More Products</button>
+                <button onClick={() => setCount(count + 1)}>Load More Products</button>
             </div>
         </div>
     )
