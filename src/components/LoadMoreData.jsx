@@ -41,7 +41,7 @@ function LoadMoreData() {
                 {products && products.length 
                     ? products.map(item => (
                         <div className="product" key={item.id}>
-                            <img src={img.thumbnail} alt={item.title} />
+                            <img src={item.thumbnail} alt={item.title} />
                             <p>{item.title}</p>
                         </div>
                     ))
