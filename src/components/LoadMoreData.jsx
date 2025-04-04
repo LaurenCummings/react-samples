@@ -37,7 +37,9 @@ function LoadMoreData() {
     }, [count])
 
     useEffect(() => {
-        if (products && products.length === 194) setDisableButton(true);
+        if (totalProducts !== 0) {
+            if (products && products.length === totalProducts) setDisableButton(true);  
+        }
     }, [products])
 
     if (loading) {
