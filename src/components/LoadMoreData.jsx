@@ -5,6 +5,8 @@ function LoadMoreData() {
     const [loading, setLoading] = useState(false);
     const [products, setProducts] = useState([]);
     const [count, setCount] = useState(0);
+    const [disableButton, setDisableButton] = useState(false);
+    const [totalProducts, setTotalProducts] = useState(0);
 
     async function fetchProducts() {
         try {
@@ -16,20 +18,23 @@ function LoadMoreData() {
 
             if (result && result.products && result.products.length) {
                 setProducts((prevData) => [...prevData, ...result.products]);
+                setTotalProducts(result.total);
                 setLoading(false);
             }
-
-            console.log(result.total);
         
         } catch(e) {
             console.log(e);
             setLoading(false);
-        }
+        } 
     }
 
     useEffect(() => {
         fetchProducts();
-    },[count])
+    }, [count])
+
+    useEffect(() => {
+        if (products && products.length === totalProducts + 20) setDisableButton(true);
+    }, [products])
 
     if (loading) {
         return <div>Loading products...</div>
@@ -49,7 +54,12 @@ function LoadMoreData() {
                 }
             </div>
             <div className="load-more-button">
-                <button onClick={() => setCount(count + 1)}>Load More Products</button>
+                <button disabled={disableButton} onClick={() => setCount(count + 1)}>
+                    Load More Products
+                </button>
+                {
+                    disableButton ? <p>You have displayed all the products</p> : null
+                }
             </div>
         </div>
     )
