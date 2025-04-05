@@ -9,7 +9,6 @@ function MenuList({list = []}) {
                     ? list.map((listItem) => <MenuItem item={listItem} />)
                     : null
             }
-
         </ul>
     )
 }
