@@ -1,6 +1,7 @@
 import '../css/TreeMenu.css';
 import MenuList from '../components/MenuList';
 import { useState } from 'react';
+import { FaMinus, FaPlus } from 'react-icons/fa';
 
 function MenuItem({item}) {
     const [displayCurrentChildren, setDisplayCurrentChildren] = useState({});
@@ -13,14 +14,14 @@ function MenuItem({item}) {
     }
 
     return (
-        <li>
-            <div className="menu-item">
+        <li className="menu-item">
+            <div className="menu-item-label">
                 <p>{item.label}</p>
                 {
                     item && item.children && item.children.length
                         ? <span onClick={() => handleToggleChildren(item.label)}>
                             {
-                                displayCurrentChildren[item.label] ? '-' : '+'
+                                displayCurrentChildren[item.label] ? <FaMinus /> : <FaPlus />
                             }
                             </span>
                         : null
