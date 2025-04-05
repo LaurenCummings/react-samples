@@ -5,12 +5,13 @@ import StarRating from './components/StarRating';
 import ImageSlider from './components/ImageSlider';
 import LoadMoreData from './components/LoadMoreData';
 import TreeMenu from './components/TreeMenu';
+import menus from './data/TreeMenu.js';
 
 function App() {
 
   return (
     <div>
-      <TreeMenu />
+      <TreeMenu menus={menus} />
     </div>
   )
 }

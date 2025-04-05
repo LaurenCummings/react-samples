@@ -1,9 +1,9 @@
 import '../css/TreeMenu.css';
 
-function TreeMenu() {
+function TreeMenu({menus = []}) {
     return (
-        <div>
-
+        <div className="tree-menu">
+            <MenuList list={menus} />
         </div>
     )
 }
