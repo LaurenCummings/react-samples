@@ -3,14 +3,14 @@ import MenuItem from '../components/MenuItem';
 
 function MenuList({list = []}) {
     return (
-        <div className="menu-list">
+        <ul className="menu-list">
             {
-                list && list.length ?
-                list.map((listItem) => <MenuItem item={listItem} />)
-                : null
+                list && list.length 
+                    ? list.map((listItem) => <MenuItem item={listItem} />)
+                    : null
             }
 
-        </div>
+        </ul>
     )
 }
 

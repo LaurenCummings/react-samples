@@ -2,9 +2,9 @@ import '../css/TreeMenu.css';
 
 function MenuItem({item}) {
     return (
-        <div>
-            Menu Item
-        </div>
+        <li>
+            <p>{item.label}</p>
+        </li>
     )
 }
 
