@@ -7,12 +7,13 @@ import LoadMoreData from './components/LoadMoreData';
 import TreeMenu from './components/TreeMenu';
 import menus from './data/TreeMenu.js';
 import QRCodeGenerator from './components/QRCodeGenerator.jsx';
+import LightDarkMode from './components/LightDarkMode.jsx';
 
 function App() {
 
   return (
     <div>
-      <QRCodeGenerator />
+      <LightDarkMode />
     </div>
   )
 }
