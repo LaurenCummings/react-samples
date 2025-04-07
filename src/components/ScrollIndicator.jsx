@@ -43,6 +43,14 @@ function ScrollIndicator({url}) {
         }
     }, [])
 
+    if (errorMessage) {
+        return <div>Error ! {errorMessage}</div>
+    }
+
+    if (loading) {
+        return <div>Loading data ! Please wait</div>
+    }
+
     return(
         <div>
             <div className="top-container">
