@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <ScrollIndicator />
+      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>
     </div>
   )
 }
