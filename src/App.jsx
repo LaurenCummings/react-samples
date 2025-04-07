@@ -8,12 +8,13 @@ import TreeMenu from './components/TreeMenu';
 import menus from './data/TreeMenu.js';
 import QRCodeGenerator from './components/QRCodeGenerator.jsx';
 import LightDarkMode from './components/LightDarkMode.jsx';
+import ScrollIndicator from './components/ScrollIndicator.jsx';
 
 function App() {
 
   return (
     <div>
-      <LightDarkMode />
+      <ScrollIndicator />
     </div>
   )
 }
