@@ -22,8 +22,12 @@ function TabTest() {
         },
     ]
 
+    function handleChange(currentTabIndex) {
+        console.log(currentTabIndex);
+    }
+
     return (
-        <Tabs tabsContent={tabs} />
+        <Tabs tabsContent={tabs} onChange={handleChange} />
     )
 }
 
