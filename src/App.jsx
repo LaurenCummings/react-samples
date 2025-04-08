@@ -9,12 +9,13 @@ import menus from './data/TreeMenu.js';
 import QRCodeGenerator from './components/QRCodeGenerator.jsx';
 import LightDarkMode from './components/LightDarkMode.jsx';
 import ScrollIndicator from './components/ScrollIndicator.jsx';
+import CustomTabs from './components/CustomTabs.jsx';
 
 function App() {
 
   return (
     <div>
-      <ImageSlider url={'https://picsum.photos/v2/list'} limit={10} page={1} />
+      <CustomTabs />
     </div>
   )
 }
