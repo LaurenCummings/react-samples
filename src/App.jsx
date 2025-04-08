@@ -9,13 +9,13 @@ import menus from './data/TreeMenu.js';
 import QRCodeGenerator from './components/QRCodeGenerator.jsx';
 import LightDarkMode from './components/LightDarkMode.jsx';
 import ScrollIndicator from './components/ScrollIndicator.jsx';
-import CustomTabs from './components/CustomTabs.jsx';
+import TabTest from './components/TabTest.jsx';
 
 function App() {
 
   return (
     <div>
-      <CustomTabs />
+      <TabTest />
     </div>
   )
 }

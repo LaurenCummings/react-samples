@@ -12,11 +12,15 @@ function Tabs({tabsContent, onChange}) {
         <div className="tabs-wrapper">
             <div className="tabs-heading">
                 {
-                    tabsContent.map((tabItem) => {
-                        <div onClick={() => handleOnClick(index)} key={tabItem.label}>
+                    tabsContent.map((tabItem, index) => (
+                        <div 
+                            className={`tab-item ${currentTabIndex === index ? 'active' : ''}`} 
+                            onClick={() => handleOnClick(index)} 
+                            key={tabItem.label}
+                        >
                             <span className="label">{tabItem.label}</span>
                         </div>
-                    })
+                    ))
                 }
             </div>
             <div className="tabs-content">
