@@ -1,4 +1,4 @@
-import '../css/CustomTabs.css';
+import '../css/Tabs.css';
 import Tabs from './Tabs';
 
 function RandomComponent() {
