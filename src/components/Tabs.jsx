@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Tabs({tabsContent, onChange}) {
+function Tabs({tabsContent}) {
     const [currentTabIndex, setCurrentTabIndex] = useState(0);
 
     function handleOnClick(currentIndex) {
