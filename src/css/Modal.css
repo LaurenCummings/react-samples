@@ -22,7 +22,24 @@
 
 .close-modal-icon {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 40px;
     float: right;
     font-weight: bold;
+}
+
+.modal-header {
+    padding: 4px 16px;
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    height: 200px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: #fff;
 }
