@@ -1,3 +1,4 @@
+import '../css/Modal.css';
 import { useState } from 'react';
 import Modal from './Modal';
 
