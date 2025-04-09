@@ -19,3 +19,10 @@
     width: 80%;
     text-align: center;
 }
+
+.close-modal-icon {
+    cursor: pointer;
+    font-size: 24px;
+    float: right;
+    font-weight: bold;
+}
