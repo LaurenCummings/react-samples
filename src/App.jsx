@@ -10,12 +10,13 @@ import QRCodeGenerator from './components/QRCodeGenerator.jsx';
 import LightDarkMode from './components/LightDarkMode.jsx';
 import ScrollIndicator from './components/ScrollIndicator.jsx';
 import TabTest from './components/TabTest.jsx';
+import ModalTest from './components/ModalTest.jsx';
 
 function App() {
 
   return (
     <div>
-      <TabTest />
+      <ModalTest />
     </div>
   )
 }
