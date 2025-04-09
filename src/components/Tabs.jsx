@@ -5,7 +5,6 @@ function Tabs({tabsContent}) {
 
     function handleOnClick(currentIndex) {
         setCurrentTabIndex(currentIndex);
-        onChange(currentIndex);
     }
 
     return(
