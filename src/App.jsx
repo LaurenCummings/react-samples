@@ -11,12 +11,13 @@ import LightDarkMode from './components/LightDarkMode.jsx';
 import ScrollIndicator from './components/ScrollIndicator.jsx';
 import TabTest from './components/TabTest.jsx';
 import ModalTest from './components/ModalTest.jsx';
+import GithubProfileFinder from './components/GithubProfileFinder.jsx';
 
 function App() {
 
   return (
     <div>
-      <ModalTest />
+      <GithubProfileFinder />
     </div>
   )
 }
