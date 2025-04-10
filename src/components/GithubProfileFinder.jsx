@@ -15,13 +15,14 @@ function GithubProfileFinder() {
         if (data) {
             setUserData(data);
             setLoading(false);
+            setUserName('');
         }
 
         console.log(data);
     }
     
     function handleSubmit() {
-
+        fetchGithubUserData();
     }
 
     useEffect(() => {
