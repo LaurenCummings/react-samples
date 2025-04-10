@@ -1,5 +1,6 @@
 import '../css/GithubProfileFinder.css';
 import { useState, useEffect } from 'react';
+import GithubUser from './GithubUser';
 
 function GithubProfileFinder() {
     const [userName, setUserName] = useState('sangammukherjee');
@@ -43,6 +44,9 @@ function GithubProfileFinder() {
                 />
                 <button onClick={handleSubmit}>Search</button>
             </div>
+            {
+                userData !== null ? <GithubUser user={userData} /> : null
+            }
         </div>
     )
 }
