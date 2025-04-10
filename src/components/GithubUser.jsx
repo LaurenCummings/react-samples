@@ -1,3 +1,5 @@
+import '../css/GithubUser.css';
+
 function GithubUser({user}) {
     const {avatar_url, followers, following, public_repos, html_url, name, login, created_at} = user;
 

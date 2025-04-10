@@ -1,4 +1,3 @@
-import '../css/GithubProfileFinder.css';
 import { useState, useEffect } from 'react';
 import GithubUser from './GithubUser';
 
