@@ -10,11 +10,11 @@ function GithubUser({user}) {
             <div>
                 <img src={avatar_url} className="avatar" alt="User" />
             </div>
-            <div>
+            <div className="name-container">
                 <a href={html_url}>{name || login}</a>
                 <p>User joined on {`${createdDate.getDate()} ${createdDate.toLocaleDateString('en-us', {month : 'short'})} ${createdDate.getFullYear()}`}</p>
             </div>
-            <div>
+            <div className="profile-info">
                 <div>
                     <p>Public Repos</p>
                     <p>{public_repos}</p>
