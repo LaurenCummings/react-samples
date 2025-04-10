@@ -1,3 +1,4 @@
+import '../css/GithubUser.css';
 import { useState, useEffect } from 'react';
 import GithubUser from './GithubUser';
 
@@ -17,7 +18,6 @@ function GithubProfileFinder() {
             setUserName('');
         }
 
-        console.log(data);
     }
     
     function handleSubmit() {
