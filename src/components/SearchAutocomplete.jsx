@@ -12,14 +12,14 @@ function SearchAutocomplete() {
     function handleChange(event) {
         const query = event.target.value.toLowerCase();
         setSearchParam(query);
-        if (query > 1) {
+        if (query.length > 1) {
             const filteredData = users && users.length 
                 ? users.filter((item) => item.toLowerCase().indexOf(query) > -1)
                 : [];
                 setFilteredUsers(filteredData);
-                showDropdown(true);
+                setShowDropdown(true);
         } else {
-            showDropdown(false);
+            setShowDropdown(false);
         }
     }
 
