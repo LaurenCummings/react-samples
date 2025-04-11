@@ -25,7 +25,6 @@ function SearchAutocomplete() {
     }
 
     function handleClick(event) {
-        console.log(event.target.innerText);
         setShowDropdown(false);
         setSearchParam(event.target.innerText);
         setFilteredUsers([]);
@@ -37,7 +36,6 @@ function SearchAutocomplete() {
             const response = await fetch('https://dummyjson.com/users');
             const data = await response.json();
 
-            console.log(data);
             if (data && data.users && data.users.length) {
                 setUsers(data.users.map((userItem) => userItem.firstName));
                 setLoading(false);
@@ -58,8 +56,6 @@ function SearchAutocomplete() {
     if (loading) {
         return (<h1>Loading Data ! Please wait</h1>)
     }
-
-    console.log(users, filteredUsers);
 
     return (
         <div className="search-autocomplete-container">
