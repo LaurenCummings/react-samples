@@ -47,6 +47,10 @@ function SearchAutocomplete() {
         fetchListOfUsers()
     }, []);
 
+    if (loading) {
+        return (<h1>Loading Data ! Please wait</h1>)
+    }
+
     console.log(users, filteredUsers);
 
     return (
@@ -57,6 +61,9 @@ function SearchAutocomplete() {
                 placeholder="Search users here..."
                 onChange={handleChange}
             />
+            {
+                showDropdown && <Suggestions data={filteredUsers} />
+            }
 
         </div>
     )
