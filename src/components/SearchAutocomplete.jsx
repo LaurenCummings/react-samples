@@ -1,5 +1,5 @@
 import '../css/SearchAutocomplete.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function SearchAutocomplete() {
     const [loading, setLoading] = useState(false);
@@ -17,6 +17,7 @@ function SearchAutocomplete() {
         } catch(error) {
             console.log(error)
             setError(error);
+            setLoading(false);
         }
     }
 

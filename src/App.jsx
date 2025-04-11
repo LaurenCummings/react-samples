@@ -12,12 +12,13 @@ import ScrollIndicator from './components/ScrollIndicator.jsx';
 import TabTest from './components/TabTest.jsx';
 import ModalTest from './components/ModalTest.jsx';
 import GithubProfileFinder from './components/GithubProfileFinder.jsx';
+import SearchAutocomplete from './components/SearchAutocomplete.jsx';
 
 function App() {
 
   return (
     <div>
-      <GithubProfileFinder />
+      <SearchAutocomplete />
     </div>
   )
 }
