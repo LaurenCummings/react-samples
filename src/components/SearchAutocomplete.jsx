@@ -1,5 +1,6 @@
 import '../css/SearchAutocomplete.css';
 import { useState, useEffect } from 'react';
+import Suggestions from '../components/Suggestions';
 
 function SearchAutocomplete() {
     const [loading, setLoading] = useState(false);
