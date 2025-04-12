@@ -9,13 +9,41 @@ function TicTacToe() {
 
     const [squares, setSquares] = useState(Array(9).fill(''));
     const [isXTurn, setIsXTurn] = useState(true);
+    const [status, setStatus] = useState('');
 
     function handleClick(currentSquare) {
         let cpySquares = [...squares];
+        if (getWinner(cpySquares) || cpySquares[currentSquare]) return;
         cpySquares[currentSquare] = isXTurn ? 'X' : 'O';
         setIsXTurn(!isXTurn);
         setSquares(cpySquares);
     }
+
+    function getWinner(squares) {
+        const winningPatterns = [
+            [0,1,2],
+            [3,4,5],
+            [6,7,8],
+            [2,5,8],
+            [0,4,8],
+            [2,4,6],
+            [0,3,6],
+            [1,4,7]
+        ];
+
+        for (let i = 0; i < winningPatterns.length; i++) {
+            const [x, y, z] = winningPatterns[i]
+
+            if(squares[x] && squares[x] === squares[y] && squares[x] === squares[z]) {
+                return squares[x];
+            }
+        }
+        return null;
+    }
+
+    useEffect(() => {
+
+    }, [squares, isXTurn])
 
     return (
         <div className="tic-tac-toe-container">
