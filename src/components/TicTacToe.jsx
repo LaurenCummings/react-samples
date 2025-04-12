@@ -1,10 +1,13 @@
 import '../css/TicTacToe.css';
+import { useState } from 'react';
+
+function Square({ value }) {
+    return <button className="square">{value}</button>
+}
 
 function TicTacToe() {
 
-    function Square({ value }) {
-        return <button className="square">{value}</button>
-    }
+    const [squares, setSquares] = useState(Array(9).fill(""));
 
     return (
         <div className="tic-tac-toe-container">
