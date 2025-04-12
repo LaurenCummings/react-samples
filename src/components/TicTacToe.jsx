@@ -1,5 +1,5 @@
 import '../css/TicTacToe.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Square({ value, onClick }) {
     return <button onClick={onClick} className="square">{value}</button>
