@@ -13,12 +13,13 @@ import TabTest from './components/TabTest.jsx';
 import ModalTest from './components/ModalTest.jsx';
 import GithubProfileFinder from './components/GithubProfileFinder.jsx';
 import SearchAutocomplete from './components/SearchAutocomplete.jsx';
+import TicTacToe from './components/TicTacToe.jsx';
 
 function App() {
 
   return (
     <div>
-      <SearchAutocomplete />
+      <TicTacToe />
     </div>
   )
 }
