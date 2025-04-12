@@ -2,8 +2,8 @@ import '../css/TicTacToe.css';
 
 function TicTacToe() {
 
-    function Square() {
-        return <button>{value}</button>
+    function Square({ value }) {
+        return <button className="square">{value}</button>
     }
 
     return (
