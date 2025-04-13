@@ -1,4 +1,5 @@
 import '../css/FeatureFlag.css';
+import { useContext } from 'react';
 import Accordian from './Accordian';
 import LightDarkMode from './LightDarkMode';
 import TicTacToe from './TicTacToe';
@@ -6,6 +7,8 @@ import ColorGenerator from './ColorGenerator';
 import TreeMenu from './TreeMenu';
 
 function FeatureFlag() {
+
+    const {loading, enabledFlags} = useContext(FeatureFlagContext)
 
     const componentsToRender = [
         {
@@ -29,6 +32,8 @@ function FeatureFlag() {
             component : <TreeMenu />
         },
     ]
+
+    if (loading) return <h1>Loading data ! Please wait</h1>
 
     return (
         <div>
