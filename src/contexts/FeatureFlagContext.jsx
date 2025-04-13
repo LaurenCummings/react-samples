@@ -11,6 +11,7 @@ function FeatureFlagGlobalState({ children }) {
         try {
             const response = await featureFlagsDataServiceCall();
             console.log(response);
+            setEnabledFlags(response);
         } catch(error) {
             console.log(error);
             throw new Error(error);
@@ -22,7 +23,7 @@ function FeatureFlagGlobalState({ children }) {
     },[]);
 
     return (
-        <FeatureFlagContext.Provider value={{}}>
+        <FeatureFlagContext.Provider value={{ enabledFlags }}>
             {children}
         </FeatureFlagContext.Provider>
     );
