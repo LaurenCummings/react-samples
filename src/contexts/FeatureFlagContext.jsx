@@ -1,12 +1,12 @@
 import { createContext } from 'react';
 
-export const FeatureFlagsContext = createContext(null);
+export const FeatureFlagContext = createContext(null);
 
 function FeatureFlagGlobalState({ children }) {
     return (
-        <FeatureFlagsContext.Provider value={{}}>
+        <FeatureFlagContext.Provider value={{}}>
             {children}
-        </FeatureFlagsContext.Provider>
+        </FeatureFlagContext.Provider>
     );
 }
 
