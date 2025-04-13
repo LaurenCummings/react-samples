@@ -13,4 +13,4 @@ function featureFlagsDataServiceCall() {
     })
 }
 
-export default featureFlagDataServiceCall;
+export default featureFlagsDataServiceCall;
