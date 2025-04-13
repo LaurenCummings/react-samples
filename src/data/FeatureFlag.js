@@ -1,0 +1,3 @@
+const dummyApiResponse = {
+    showLightAndDarkMode : true
+}
