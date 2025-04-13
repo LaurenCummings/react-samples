@@ -14,12 +14,16 @@ import ModalTest from './components/ModalTest.jsx';
 import GithubProfileFinder from './components/GithubProfileFinder.jsx';
 import SearchAutocomplete from './components/SearchAutocomplete.jsx';
 import TicTacToe from './components/TicTacToe.jsx';
+import FeatureFlag from './components/FeatureFlag';
+import FeatureFlagGlobalState from './contexts/FeatureFlagContext.jsx'
 
 function App() {
 
   return (
     <div>
-      <TicTacToe />
+      <FeatureFlagGlobalState>
+        <FeatureFlag />
+      </FeatureFlagGlobalState>
     </div>
   )
 }
