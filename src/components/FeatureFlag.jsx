@@ -6,6 +6,7 @@ import TicTacToe from './TicTacToe';
 import ColorGenerator from './ColorGenerator';
 import TreeMenu from './TreeMenu';
 import menus from '../data/TreeMenu';
+import TabTest from './TabTest';
 import { FeatureFlagContext } from '../contexts/FeatureFlagContext';
 
 function FeatureFlag() {
@@ -32,6 +33,10 @@ function FeatureFlag() {
         {
             key : 'showTreeView',
             component : <TreeMenu menus={menus} />
+        },
+        {
+            key : 'showTabs',
+            component : <TabTest />
         },
     ]
 
