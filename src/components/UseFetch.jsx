@@ -27,11 +27,7 @@ function useFetch(url, options= {}) {
 
     },[url]);
 
-    return (
-        <div>
-
-        </div>
-    )
+    return { data, error, Pending }
 }
 
 export default useFetch;
