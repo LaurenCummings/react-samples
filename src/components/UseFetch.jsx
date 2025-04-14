@@ -27,7 +27,7 @@ function useFetch(url, options= {}) {
 
     },[url]);
 
-    return { data, error, Pending }
+    return { data, error, pending }
 }
 
 export default useFetch;
