@@ -17,12 +17,13 @@ import TicTacToe from './components/TicTacToe.jsx';
 import FeatureFlag from './components/FeatureFlag';
 import FeatureFlagGlobalState from './contexts/FeatureFlagContext.jsx';
 import UseFetchTest from './components/UseFetchTest.jsx';
+import UseOutsideClickTest from './components/UseOutsideClickTest.jsx';
 
 function App() {
 
   return (
     <div>
-      <UseFetchTest />
+      <UseOutsideClickTest />
     </div>
   )
 }
