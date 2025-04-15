@@ -1,12 +1,15 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import UseOutsideClick from '../components/UseOutsideClick';
 
 function UseOutsideClickTest() {
     const [showContent, setShowContent] = useState(false);
+    const ref = useRef();
+    UseOutsideClick(ref, () => setShowContent(false))
 
     return (
         <div>
             {showContent ? (
-                <div>
+                <div ref={ref}>
                     <h1>This is random content</h1>
                     <p>
                         Please click outside of this to close this. 
