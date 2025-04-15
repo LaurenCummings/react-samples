@@ -18,12 +18,13 @@ import FeatureFlag from './components/FeatureFlag';
 import FeatureFlagGlobalState from './contexts/FeatureFlagContext.jsx';
 import UseFetchTest from './components/UseFetchTest.jsx';
 import UseOutsideClickTest from './components/UseOutsideClickTest.jsx';
+import UseWindowResizeTest from './components/UseWindowResizeTest.jsx';
 
 function App() {
 
   return (
     <div>
-      <UseOutsideClickTest />
+      <UseWindowResizeTest />
     </div>
   )
 }
