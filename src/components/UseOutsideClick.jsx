@@ -18,12 +18,6 @@ function UseOutsideClick(ref, handler) {
             document.removeEventListener('touchstart', listener);
         };
     },[handler, ref])
-
-    return (
-        <div>
-
-        </div>
-    )
 }
 
 export default UseOutsideClick;
