@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div>
-      <UseOutsideClickTest />
+      <UseWindowResizeTest />
     </div>
   )
 }
