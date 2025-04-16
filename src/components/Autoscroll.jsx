@@ -1,7 +1,15 @@
 import UseFetch from '../components/UseFetch';
 
 function Autoscroll() {
-    const { data, error, pending } = UseFetch("https://dummyjson.com/products",{});
+    const { data, error, pending } = UseFetch("https://dummyjson.com/products?limit=100",{});
+
+    function handleScrollToTop() {
+        window.scrollTo({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth',
+        });
+    }
 
     if (error) {
         return <h1>Error occurred ! Please try again.</h1>
@@ -23,7 +31,7 @@ function Autoscroll() {
                         : null
                 }
             </ul>
-            <button>Scroll to Top</button>
+            <button onClick={handleScrollToTop}>Scroll to Top</button>
             <h3>This is the bottom of the page</h3>
         </div>
     )
