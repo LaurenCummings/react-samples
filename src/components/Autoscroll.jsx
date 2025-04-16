@@ -23,6 +23,8 @@ function Autoscroll() {
                         : null
                 }
             </ul>
+            <button>Scroll to Top</button>
+            <h3>This is the bottom of the page</h3>
         </div>
     )
 }
