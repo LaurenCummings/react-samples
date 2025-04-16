@@ -1,7 +1,10 @@
+import { useRef } from 'react';
 import UseFetch from '../components/UseFetch';
 
 function Autoscroll() {
     const { data, error, pending } = UseFetch("https://dummyjson.com/products?limit=100",{});
+
+    const bottomRef = useRef(null);
 
     function handleScrollToTop() {
         window.scrollTo({
@@ -9,6 +12,10 @@ function Autoscroll() {
             left: 0, 
             behavior: 'smooth',
         });
+    }
+
+    function handleScrollToBottom() {
+        bottomRef.current.scrollIntoView({ behavior: 'smooth'});
     }
 
     if (error) {
@@ -23,7 +30,7 @@ function Autoscroll() {
         <div>
             <h1>Scroll to Top and Bottom Feature</h1>
             <h3>This is the top section</h3>
-            <button>Scroll to Bottom</button>
+            <button onClick={handleScrollToBottom}>Scroll to Bottom</button>
             <ul>
                 {
                     data && data.products && data.products.length 
@@ -32,6 +39,7 @@ function Autoscroll() {
                 }
             </ul>
             <button onClick={handleScrollToTop}>Scroll to Top</button>
+            <div ref={bottomRef}></div>
             <h3>This is the bottom of the page</h3>
         </div>
     )
