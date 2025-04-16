@@ -19,12 +19,13 @@ import FeatureFlagGlobalState from './contexts/FeatureFlagContext.jsx';
 import UseFetchTest from './components/UseFetchTest.jsx';
 import UseOutsideClickTest from './components/UseOutsideClickTest.jsx';
 import UseWindowResizeTest from './components/UseWindowResizeTest.jsx';
+import Autoscroll from './components/Autoscroll.jsx';
 
 function App() {
 
   return (
     <div>
-      <UseWindowResizeTest />
+      <Autoscroll />
     </div>
   )
 }
